@@ -1,0 +1,92 @@
+
+
+#submit{
+
+    font-size: 20px;
+}
+
+#chose{
+    font-size: 20px;
+}
+
+
+#cust{
+    font-size: 20px;
+
+    border-radius: 40px;
+}
+
+
+
+
+#elctroTabel,td,th,tr{
+    
+    
+    
+    
+    border: solid 3px black; 
+    
+    font-size: 31px;  
+    
+    width: 40%; 
+    
+    
+    padding: 3px; 
+    
+    text-align: center; 
+    
+    background-color: blue;
+}  
+
+td{
+
+   background-color: #185ADB;
+}
+
+th{
+    font-size: 40px;
+}
+
+#myform{
+    
+    position: relative; 
+    
+    top: 158px; 
+    
+    left: 90px;
+    
+    background-color: blue; 
+    
+    width: 35%; 
+    
+    height: 30%;
+    
+    font-size: 40px;
+    
+    text-align: center;
+}
+
+#elctroTabel{
+
+    position: absolute; 
+    left: 57%;
+    top: 43%;
+}
+
+
+
+#welcome{
+
+    text-align: center; 
+    background-color: gray; 
+    padding: 4%;
+    font-size: 40px;
+}
+
+
+body{
+
+    background-image: url(https://www.gstatic.com/bfe/apps/website/img/h/80116919-circuit-board-1440.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
