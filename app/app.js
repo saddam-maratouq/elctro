@@ -12,13 +12,15 @@ let mainHeader = ['cust name','elctro type','price','condtion']
 
 elctro.item =[]
 
-function elctro(custName,type,price){
+function elctro(custName,type,price,total){
 
 this.custName = custName 
 
 this.type = type 
 
 this.price = randomPrice(100,700)
+
+this.total = calcTotal();
 
 elctro.item.push(this)
 
@@ -28,8 +30,24 @@ saveLocal ();
 
 
 
+let total = document.getElementById('total')
 
-function randomPrice(min,max) {
+function calcTotal() {
+    
+    let total = 0 
+
+    for (let i = 0; i < elctro.item.length; i++) {
+
+        total = total + elctro.item.price
+    }
+
+    return total;
+}
+
+
+
+
+function randomPrice(max,min) {
     
    return Math.floor(Math.random()*(max-min)) +  min 
 }
@@ -53,6 +71,8 @@ for (let i = 0; i < mainHeader.length; i++) {
 
 
 }
+
+
 
 tabelHeader();
 
@@ -109,7 +129,16 @@ elctro.prototype.render = function () {
 
 
     }
+
+    let totalTd = document.createElement('td')
+
+let amount = calcTotal();
+totalTd.textContent =` the total is   ${amount}`
+  
+     
+    
 }
+
 
 
 
@@ -135,7 +164,7 @@ if (normalObj !== null) {
     
        
        
-        let theItem = new elctro (normalObj[i].custName,normalObj[i].type,normalObj[i] .price)
+        let theItem = new elctro (normalObj[i].custName,normalObj[i].type,normalObj[i] .price,normalObj[i].total)
         
         theItem.render();
     }
@@ -146,50 +175,6 @@ if (normalObj !== null) {
 
 
 readLocal();  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
